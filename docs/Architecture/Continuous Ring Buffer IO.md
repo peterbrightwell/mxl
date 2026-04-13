@@ -1,3 +1,6 @@
+<!-- SPDX-FileCopyrightText: 2025 Contributors to the Media eXchange Layer project. -->
+<!-- SPDX-License-Identifier: CC-BY-4.0 -->
+
 # Continuous Ring Buffer I/O
 
 Continuous ringbuffers are used in the MXL SDK for handling audio data, where samples are written and read in a continuous, streaming fashion. This section describes the structure, memory layout, and access patterns for continuous ringbuffers in MXL.
