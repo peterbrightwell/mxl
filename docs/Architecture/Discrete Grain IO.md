@@ -4,7 +4,9 @@ Grain I/O can be 'partial'. In other words, a FlowWriter can write the bytes of 
 
 The following example demonstrates how a FlowWriter may write a grain as slices using multiple `mxlFlowWriterCommitGrain()` calls. The important field here is the `mxlGrainInfo.committedSize`: it tells us how many bytes in the grain are valid. A complete grain will have `mxlGrainInfo.committedSize == mxlGrainInfo.grainSize`. It is imperative that FlowReaders _always_ take into consideration the `mxlGrainInfo.committedSize` field before making use of the grain buffer. The `mxlFlowReaderGetGrain` function will return as soon as new data is committed to the grain.
 
-### Example Grain I/O (from the [unit tests](../lib/tests/test_flows.cpp))
+## Example Grain I/O 
+
+This is taken from the [unit tests](https://github.com/dmf-mxl/mxl/blob/main/lib/tests/test_flows.cpp)
 
 ```c++
 ///
@@ -38,7 +40,7 @@ for ( size_t slice = 0; slice < maxSlice; slice++ )
 }
 ```
 
-**Key Points:**
+## Key Points
 
 - Grains can be written in slices, not just as a single block.
 - The committed size must always be checked by readers.
