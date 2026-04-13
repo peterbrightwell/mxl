@@ -46,7 +46,7 @@ flowchart LR
     A4["ring buffer index=4<br/>gi=4<br/>ts=80'000'000ns"] --> A0
 
     %% head
-    style A2 fill:#030,color:#eee,stroke:#333,stroke-width:2px
+    style A2 stroke:#080,stroke-width:3px
 
 ```
 
