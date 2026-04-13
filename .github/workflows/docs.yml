@@ -24,9 +24,9 @@ jobs:
       - run: pip install zensical
       - run: zensical build --clean
       - name: Check for broken links with lychee
-        uses: lycheeverse/lychee-action@v1.8.0
+        uses: lycheeverse/lychee-action@v2
         with:
-          args: --root-dir ./site ./site/**/*.html
+          args: "--root-dir ./site --verbose --no-progress './site/**/*.html'"
       - uses: actions/upload-pages-artifact@v4
         with:
           path: site
