@@ -50,35 +50,38 @@ Copyright &copy; 2026 Contributors to the Media eXchange Layer project.
 # Read more: https://zensical.org/docs/setup/navigation/
 nav = [
     { "Home" = "index.md" },
-    { "v1.0" = [
-        { "Introduction" = [
-                "v1.0/Introduction/Motivation.md",
-                "v1.0/Introduction/Getting Started.md",
-                "v1.0/Introduction/APIs.md",
-                "v1.0/Introduction/Governance.md",
-        ]},
-        { "Guide" = [
-                "v1.0/Guide/Building.md",
-                "v1.0/Guide/Configuration.md",
-                "v1.0/Guide/API Usage.md",
-                "v1.0/Guide/Tools.md",
-        ]},
-        { "Architecture" = [
-             { "Overview" = "v1.0/Architecture/Overview.md" },
-             { "Shared Memory" = "v1.0/Architecture/Shared Memory Model.md" },
-             { "Security" = "v1.0/Architecture/Security Model.md" },
-             { "Timing" = "v1.0/Architecture/Timing Model.md" },
-             { "Ring Buffer Types" = "v1.0/Architecture/Ring Buffer Types.md" },
-             { "Discrete Grain I/O" = "v1.0/Architecture/Discrete Grain IO.md" },
-             { "Continuous I/O" = "v1.0/Architecture/Continuous Ring Buffer IO.md" },
-             { "Grain Formats" = "v1.0/Architecture/Grain Formats.md" },
-             { "Addressability" = "v1.0/Architecture/Addressability.md" },
-        ]},
+    { "Introduction" = [
+            "Introduction/Motivation.md",
+            "Introduction/Getting Started.md",
+            "Introduction/APIs.md",
+            "Introduction/Governance.md",
     ]},
-    { "v1.1" = [
-        { "Introduction" = [
-            "v1.1/Introduction/Coming Soon.md",
-        ]},
+    { "Guide" = [
+            "Guide/Building.md",
+            "Guide/Configuration.md",
+            "Guide/API Usage.md",
+            "Guide/Tools.md",
+    ]},
+    { "Architecture" = [
+         { "Overview" = "Architecture/Overview.md" },
+         { "Shared Memory" = "Architecture/Shared Memory Model.md" },
+         { "Security" = "Architecture/Security Model.md" },
+         { "Timing" = "Architecture/Timing Model.md" },
+         { "Ring Buffer Types" = "Architecture/Ring Buffer Types.md" },
+         { "Discrete Grain I/O" = "Architecture/Discrete Grain IO.md" },
+         { "Continuous I/O" = "Architecture/Continuous Ring Buffer IO.md" },
+         { "Grain Formats" = "Architecture/Grain Formats.md" },
+         { "Addressability" = "Architecture/Addressability.md" },
+    ]},
+    { "API" = [
+        "api/dataformat.md",
+        "api/flow.md",
+        "api/flowinfo.md",
+        "api/index.md",
+        "api/mxl.md",
+        "api/platform.md",
+        "api/rational.md",
+        "api/time.md",
     ]},
 ]
 
@@ -351,3 +354,6 @@ toggle.name = "Switch to light mode"
 #[[project.extra.social]]
 #icon = "fontawesome/brands/github"
 #link = "https://github.com/user/repo"
+#
+[project.extra.version]
+provider = "mike"
