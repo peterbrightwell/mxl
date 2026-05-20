@@ -21,10 +21,12 @@ This is the preferred option for development on WSL2 or native linux desktop. Th
 
 ## Option 2: CMake with presets
 
+<!--https://specs.amwa.tv/-->
+
 _Note: the following instructions apply to Ubuntu 22.04._
 
 1. Install all apt packages specified in the [Dockerfile](../.devcontainer/Dockerfile)
-2. Install vcpkg as done in the [Dockerfile](../main/.devcontainer/Dockerfile)
+2. Install vcpkg as done in the [Dockerfile](../.devcontainer/Dockerfile)
 3. Create a build directory and invoke cmake with a build preset. the list of available presets is:
 
 ```bash
