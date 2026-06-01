@@ -974,7 +974,7 @@
 <h2 id="discrete-grain-io">Discrete Grain I/O</h2>
 <p>Grain I/O can be 'partial'. In other words, a FlowWriter can write the bytes of a grain progressively (as slices for example).</p>
 <p>The following example demonstrates how a FlowWriter may write a grain as slices using multiple <code>mxlFlowWriterCommitGrain()</code> calls. The important field here is the mxlGrainInfo.committedSize: it tells us how many bytes in the grain are valid. A complete grain will have <code>mxlGrainInfo.committedSize == mxlGrainInfo.grainSize</code>. It is imperative that FlowReaders <em>always</em> take into consideration the <code>mxlGrainInfo.committedSize</code> field before making use of the grain buffer. The <code>mxlFlowReaderGetGrain</code> function will return as soon as new data is committed to the grain.</p>
-<h3 id="example-grain-io-from-the-unit-tests">Example Grain I/O (from the <a href="../../lib/tests/test_flows.cpp">unit tests</a>)</h3>
+<h3 id="example-grain-io-from-the-unit-tests">Example Grain I/O (from the <a href="https://github.com/dmf-mxl/mxl/blob/docs-action/lib/tests/test_flows.cpp">unit tests</a>)</h3>
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="c1">///</span>
 <span class="w">    </span><span class="c1">/// Write and read a grain in 8 slices</span>
 <span class="w">    </span><span class="c1">///</span>
