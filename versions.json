@@ -1,9 +1,14 @@
 [
   {
-    "version": "docs-action",
-    "title": "docs-action",
+    "version": "main",
+    "title": "main",
     "aliases": [
       "latest"
     ]
+  },
+  {
+    "version": "docs-action",
+    "title": "docs-action",
+    "aliases": []
   }
 ]
