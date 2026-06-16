@@ -10,5 +10,10 @@
     "version": "docs-action",
     "title": "docs-action",
     "aliases": []
+  },
+  {
+    "version": "v1.0.0",
+    "title": "v1.0.0",
+    "aliases": []
   }
 ]
