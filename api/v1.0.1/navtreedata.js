@@ -25,21 +25,6 @@
 var NAVTREE =
 [
   [ "MXL : Media eXchange Layer", "index.html", [
-    [ "MXL : Media eXchange Layer", "index.html#autotoc_md0", null ],
-    [ "What is MXL?", "index.html#autotoc_md1", [
-      [ "Key Characteristics", "index.html#autotoc_md2", null ],
-      [ "APIs", "index.html#autotoc_md3", [
-        [ "Flow API (MXL v1.0 on)", "index.html#autotoc_md4", null ],
-        [ "Fabric API (tbc)", "index.html#autotoc_md5", null ]
-      ] ]
-    ] ],
-    [ "Getting Started", "index.html#autotoc_md6", null ],
-    [ "Motivation", "index.html#autotoc_md7", null ],
-    [ "Learning More", "index.html#autotoc_md8", [
-      [ "Governance", "index.html#autotoc_md9", null ],
-      [ "Technical Documentation", "index.html#autotoc_md10", null ],
-      [ "License", "index.html#autotoc_md11", null ]
-    ] ],
     [ "Todo List", "todo.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
@@ -93,9 +78,9 @@ var NAVTREEINDEX =
 "classmxl_1_1lib_1_1fabrics_1_1ofi_1_1RMAGrainIngressProtocol.html#a1c0f2a4a1c3934e0e6380dcfe824dbbd",
 "classmxl_1_1lib_1_1fabrics_1_1ofi_1_1SliceRange.html#affcec5789330ac6102f247c4bd1a6b16",
 "functions_func_~.html",
-"namespacemxl_1_1lib_1_1fabrics_1_1ofi.html#a0570ab32e149571fae537a3196d37bca",
-"structmxl_1_1lib_1_1PosixFlowIoFactory.html#a27db8afbb7a03c58372f298f36c4e9e1",
-"test__basics_8cpp.html#acf9e3076ec8bf5f506de4c9cabeb47a4"
+"namespacemxl_1_1lib_1_1fabrics_1_1ofi.html#a3320b6baee78013a96c493ccffee0481",
+"structmxl_1_1lib_1_1SharedMemoryInstance.html",
+"test__flowmanager_8cpp.html#a010cfcdf9b4beb69d92ba225fcd31090"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
