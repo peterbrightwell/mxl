@@ -42,7 +42,7 @@ var searchData=
   ['createoropendiscreteflow_39',['createOrOpenDiscreteFlow',['../classmxl_1_1lib_1_1FlowManager.html#a88cff4cbf0d597602f126965064744f7',1,'mxl::lib::FlowManager']]],
   ['createoropendiscreteflowdata_40',['createOrOpenDiscreteFlowData',['../classmxl_1_1lib_1_1Instance.html#a2d53da503ced8330771782464611adca',1,'mxl::lib::Instance']]],
   ['createtarget_41',['createTarget',['../classmxl_1_1lib_1_1fabrics_1_1ofi_1_1FabricsInstance.html#a090c258229224f55af3a14be7145f0a1',1,'mxl::lib::fabrics::ofi::FabricsInstance']]],
-  ['cuda_42',['cuda',['../classmxl_1_1lib_1_1fabrics_1_1ofi_1_1Region_1_1Location_1_1Cuda.html#a653bfaeecae265785a87ed24816eb3bb',1,'mxl::lib::fabrics::ofi::Region::Location::Cuda::Cuda()'],['../classmxl_1_1lib_1_1fabrics_1_1ofi_1_1Region_1_1Location.html#aa333159efca19bf724f57bad24db907f',1,'mxl::lib::fabrics::ofi::Region::Location::cuda()']]],
+  ['cuda_42',['cuda',['../classmxl_1_1lib_1_1fabrics_1_1ofi_1_1Region_1_1Location.html#aa333159efca19bf724f57bad24db907f',1,'mxl::lib::fabrics::ofi::Region::Location::cuda()'],['../classmxl_1_1lib_1_1fabrics_1_1ofi_1_1Region_1_1Location_1_1Cuda.html#a653bfaeecae265785a87ed24816eb3bb',1,'mxl::lib::fabrics::ofi::Region::Location::Cuda::Cuda()']]],
   ['currenttime_43',['currentTime',['../namespacemxl_1_1lib.html#aa3b6bf083621f7a09768fce0fc8b4c04',1,'mxl::lib']]],
   ['currenttimeutc_44',['currentTimeUTC',['../namespacemxl_1_1lib.html#a99e67fb9f02f8fb30b659da5ff8a282e',1,'mxl::lib']]]
 ];

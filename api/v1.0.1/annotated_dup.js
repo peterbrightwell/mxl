@@ -61,6 +61,7 @@ var annotated_dup =
             [ "Target", "classmxl_1_1lib_1_1fabrics_1_1ofi_1_1Target.html", "classmxl_1_1lib_1_1fabrics_1_1ofi_1_1Target" ],
             [ "TargetInfo", "structmxl_1_1lib_1_1fabrics_1_1ofi_1_1TargetInfo.html", "structmxl_1_1lib_1_1fabrics_1_1ofi_1_1TargetInfo" ],
             [ "TargetInfoBounceBufferInfo", "structmxl_1_1lib_1_1fabrics_1_1ofi_1_1TargetInfoBounceBufferInfo.html", "structmxl_1_1lib_1_1fabrics_1_1ofi_1_1TargetInfoBounceBufferInfo" ],
+            [ "TargetSetupOptions", "structmxl_1_1lib_1_1fabrics_1_1ofi_1_1TargetSetupOptions.html", "structmxl_1_1lib_1_1fabrics_1_1ofi_1_1TargetSetupOptions" ],
             [ "TargetWrapper", "classmxl_1_1lib_1_1fabrics_1_1ofi_1_1TargetWrapper.html", "classmxl_1_1lib_1_1fabrics_1_1ofi_1_1TargetWrapper" ]
           ] ]
         ] ],

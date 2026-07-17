@@ -90,6 +90,7 @@ var hierarchy =
     [ "mxl::lib::fabrics::ofi::Target::SampleReadResult", "structmxl_1_1lib_1_1fabrics_1_1ofi_1_1Target_1_1SampleReadResult.html", null ],
     [ "mxl::lib::fabrics::ofi::TargetInfo", "structmxl_1_1lib_1_1fabrics_1_1ofi_1_1TargetInfo.html", null ],
     [ "mxl::lib::fabrics::ofi::TargetInfoBounceBufferInfo", "structmxl_1_1lib_1_1fabrics_1_1ofi_1_1TargetInfoBounceBufferInfo.html", null ],
+    [ "mxl::lib::fabrics::ofi::TargetSetupOptions", "structmxl_1_1lib_1_1fabrics_1_1ofi_1_1TargetSetupOptions.html", null ],
     [ "mxl::lib::fabrics::ofi::TargetWrapper", "classmxl_1_1lib_1_1fabrics_1_1ofi_1_1TargetWrapper.html", null ],
     [ "mxl::lib::Flow", "structmxl_1_1lib_1_1Flow.html", null ],
     [ "mxl::lib::FlowData", "classmxl_1_1lib_1_1FlowData.html", [
