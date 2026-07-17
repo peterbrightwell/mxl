@@ -98,6 +98,7 @@ $(document).ready(function(){initNavTree('structmxl_1_1lib_1_1fabrics_1_1ofi_1_1
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="structmxl_1_1lib_1_1fabrics_1_1ofi_1_1CompletionQueue_1_1Attributes-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">mxl::lib::fabrics::ofi::CompletionQueue::Attributes Struct Reference</div></div>
 </div><!--header-->
@@ -126,6 +127,12 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a82c24312a6b59c0345a61765ee814d00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4bd5e8e66d0505df4abb1f8bfe87f163" id="r_a4bd5e8e66d0505df4abb1f8bfe87f163"><td class="memItemLeft" align="right" valign="top">enum fi_wait_obj&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmxl_1_1lib_1_1fabrics_1_1ofi_1_1CompletionQueue_1_1Attributes.html#a4bd5e8e66d0505df4abb1f8bfe87f163">waitObject</a></td></tr>
 <tr class="separator:a4bd5e8e66d0505df4abb1f8bfe87f163"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a2b4cacf3b0280547cb567e43dbc2565f" id="r_a2b4cacf3b0280547cb567e43dbc2565f"><td class="memItemLeft" align="right" valign="top">static constexpr std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmxl_1_1lib_1_1fabrics_1_1ofi_1_1CompletionQueue_1_1Attributes.html#a2b4cacf3b0280547cb567e43dbc2565f">DEFAULT_SIZE</a> = 8</td></tr>
+<tr class="memdesc:a2b4cacf3b0280547cb567e43dbc2565f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The completion-queue depth used when no explicit depth is requested.  <br /></td></tr>
+<tr class="separator:a2b4cacf3b0280547cb567e43dbc2565f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A collection of attributes that can be used to configure the operation of newly created completion queues. </p>
@@ -160,10 +167,11 @@ Public Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="CompletionQueue_8cpp_source.html#l00021">21</a> of file <a class="el" href="CompletionQueue_8cpp_source.html">CompletionQueue.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
 <div class="line"><span class="lineno">   23</span>        CompletionQueue::Attributes attr{};</div>
-<div class="line"><span class="lineno">   24</span>        attr.size = 8;                    <span class="comment">// default size, this should be parameterized</span></div>
+<div class="line"><span class="lineno">   24</span>        attr.size = <a class="code hl_variable" href="structmxl_1_1lib_1_1fabrics_1_1ofi_1_1CompletionQueue_1_1Attributes.html#a2b4cacf3b0280547cb567e43dbc2565f">DEFAULT_SIZE</a>;</div>
 <div class="line"><span class="lineno">   25</span>        attr.waitObject = FI_WAIT_UNSPEC; <span class="comment">// TODO: EFA will require no wait object</span></div>
 <div class="line"><span class="lineno">   26</span>        <span class="keywordflow">return</span> attr;</div>
 <div class="line"><span class="lineno">   27</span>    }</div>
+<div class="ttc" id="astructmxl_1_1lib_1_1fabrics_1_1ofi_1_1CompletionQueue_1_1Attributes_html_a2b4cacf3b0280547cb567e43dbc2565f"><div class="ttname"><a href="structmxl_1_1lib_1_1fabrics_1_1ofi_1_1CompletionQueue_1_1Attributes.html#a2b4cacf3b0280547cb567e43dbc2565f">mxl::lib::fabrics::ofi::CompletionQueue::Attributes::DEFAULT_SIZE</a></div><div class="ttdeci">static constexpr std::size_t DEFAULT_SIZE</div><div class="ttdoc">The completion-queue depth used when no explicit depth is requested.</div><div class="ttdef"><b>Definition</b> <a href="CompletionQueue_8hpp_source.html#l00029">CompletionQueue.hpp:29</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -204,13 +212,39 @@ Public Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   38</span>        <a class="code hl_function" href="structmxl_1_1lib_1_1fabrics_1_1ofi_1_1CompletionQueue_1_1Attributes.html#a9e7004a2a4cd04d20f85c9095288ad2a">raw</a>.signaling_vector = 0;        <span class="comment">// this should indicate the CPU core that interrupts associated with the cq should target.</span></div>
 <div class="line"><span class="lineno">   39</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="structmxl_1_1lib_1_1fabrics_1_1ofi_1_1CompletionQueue_1_1Attributes.html#a9e7004a2a4cd04d20f85c9095288ad2a">raw</a>;</div>
 <div class="line"><span class="lineno">   40</span>    }</div>
-<div class="ttc" id="astructmxl_1_1lib_1_1fabrics_1_1ofi_1_1CompletionQueue_1_1Attributes_html_a4bd5e8e66d0505df4abb1f8bfe87f163"><div class="ttname"><a href="structmxl_1_1lib_1_1fabrics_1_1ofi_1_1CompletionQueue_1_1Attributes.html#a4bd5e8e66d0505df4abb1f8bfe87f163">mxl::lib::fabrics::ofi::CompletionQueue::Attributes::waitObject</a></div><div class="ttdeci">enum fi_wait_obj waitObject</div><div class="ttdef"><b>Definition</b> <a href="CompletionQueue_8hpp_source.html#l00040">CompletionQueue.hpp:40</a></div></div>
-<div class="ttc" id="astructmxl_1_1lib_1_1fabrics_1_1ofi_1_1CompletionQueue_1_1Attributes_html_a82c24312a6b59c0345a61765ee814d00"><div class="ttname"><a href="structmxl_1_1lib_1_1fabrics_1_1ofi_1_1CompletionQueue_1_1Attributes.html#a82c24312a6b59c0345a61765ee814d00">mxl::lib::fabrics::ofi::CompletionQueue::Attributes::size</a></div><div class="ttdeci">std::size_t size</div><div class="ttdef"><b>Definition</b> <a href="CompletionQueue_8hpp_source.html#l00039">CompletionQueue.hpp:39</a></div></div>
+<div class="ttc" id="astructmxl_1_1lib_1_1fabrics_1_1ofi_1_1CompletionQueue_1_1Attributes_html_a4bd5e8e66d0505df4abb1f8bfe87f163"><div class="ttname"><a href="structmxl_1_1lib_1_1fabrics_1_1ofi_1_1CompletionQueue_1_1Attributes.html#a4bd5e8e66d0505df4abb1f8bfe87f163">mxl::lib::fabrics::ofi::CompletionQueue::Attributes::waitObject</a></div><div class="ttdeci">enum fi_wait_obj waitObject</div><div class="ttdef"><b>Definition</b> <a href="CompletionQueue_8hpp_source.html#l00043">CompletionQueue.hpp:43</a></div></div>
+<div class="ttc" id="astructmxl_1_1lib_1_1fabrics_1_1ofi_1_1CompletionQueue_1_1Attributes_html_a82c24312a6b59c0345a61765ee814d00"><div class="ttname"><a href="structmxl_1_1lib_1_1fabrics_1_1ofi_1_1CompletionQueue_1_1Attributes.html#a82c24312a6b59c0345a61765ee814d00">mxl::lib::fabrics::ofi::CompletionQueue::Attributes::size</a></div><div class="ttdeci">std::size_t size</div><div class="ttdef"><b>Definition</b> <a href="CompletionQueue_8hpp_source.html#l00042">CompletionQueue.hpp:42</a></div></div>
 <div class="ttc" id="astructmxl_1_1lib_1_1fabrics_1_1ofi_1_1CompletionQueue_1_1Attributes_html_a9e7004a2a4cd04d20f85c9095288ad2a"><div class="ttname"><a href="structmxl_1_1lib_1_1fabrics_1_1ofi_1_1CompletionQueue_1_1Attributes.html#a9e7004a2a4cd04d20f85c9095288ad2a">mxl::lib::fabrics::ofi::CompletionQueue::Attributes::raw</a></div><div class="ttdeci">::fi_cq_attr raw() const noexcept</div><div class="ttdoc">Returns the raw libfabric version of this object.</div><div class="ttdef"><b>Definition</b> <a href="CompletionQueue_8cpp_source.html#l00029">CompletionQueue.cpp:29</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a2b4cacf3b0280547cb567e43dbc2565f" name="a2b4cacf3b0280547cb567e43dbc2565f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b4cacf3b0280547cb567e43dbc2565f">&#9670;&#160;</a></span>DEFAULT_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr std::size_t mxl::lib::fabrics::ofi::CompletionQueue::Attributes::DEFAULT_SIZE = 8</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The completion-queue depth used when no explicit depth is requested. </p>
+
+<p class="definition">Definition at line <a class="el" href="CompletionQueue_8hpp_source.html#l00029">29</a> of file <a class="el" href="CompletionQueue_8hpp_source.html">CompletionQueue.hpp</a>.</p>
+
+</div>
+</div>
 <a id="a82c24312a6b59c0345a61765ee814d00" name="a82c24312a6b59c0345a61765ee814d00"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a82c24312a6b59c0345a61765ee814d00">&#9670;&#160;</a></span>size</h2>
 
@@ -224,7 +258,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Size of the queue. </p>
 
-<p class="definition">Definition at line <a class="el" href="CompletionQueue_8hpp_source.html#l00039">39</a> of file <a class="el" href="CompletionQueue_8hpp_source.html">CompletionQueue.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CompletionQueue_8hpp_source.html#l00042">42</a> of file <a class="el" href="CompletionQueue_8hpp_source.html">CompletionQueue.hpp</a>.</p>
 
 </div>
 </div>
@@ -241,7 +275,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>The underlying wait object that should be used. </p>
 
-<p class="definition">Definition at line <a class="el" href="CompletionQueue_8hpp_source.html#l00040">40</a> of file <a class="el" href="CompletionQueue_8hpp_source.html">CompletionQueue.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CompletionQueue_8hpp_source.html#l00043">43</a> of file <a class="el" href="CompletionQueue_8hpp_source.html">CompletionQueue.hpp</a>.</p>
 
 </div>
 </div>

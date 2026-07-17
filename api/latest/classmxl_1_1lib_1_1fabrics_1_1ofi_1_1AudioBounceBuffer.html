@@ -444,22 +444,24 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  106</span>            slices);</div>
 <div class="line"><span class="lineno">  107</span> </div>
 <div class="line"><span class="lineno">  108</span>        <span class="keyword">auto</span> srcAddr = entry.samples();</div>
-<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; fragment : slices.base.fragments)</div>
-<div class="line"><span class="lineno">  110</span>        {</div>
-<div class="line"><span class="lineno">  111</span>            <span class="comment">// check if the fragment present</span></div>
-<div class="line"><span class="lineno">  112</span>            <span class="keywordflow">if</span> (fragment.size &gt; 0)</div>
-<div class="line"><span class="lineno">  113</span>            {</div>
-<div class="line"><span class="lineno">  114</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span> chan = std::size_t{0}; chan &lt; slices.<a class="code hl_variable" href="structmxlMutableWrappedMultiBufferSlice__t.html#a1c6b83fc652f5c04b8d0b7fe6b5232d2">count</a>; chan++)</div>
-<div class="line"><span class="lineno">  115</span>                {</div>
-<div class="line"><span class="lineno">  116</span>                    <span class="keyword">auto</span> <span class="keyword">const</span> dstAddr = <span class="keyword">reinterpret_cast&lt;</span>std::uint8_t*<span class="keyword">&gt;</span>(fragment.pointer) + (slices.<a class="code hl_variable" href="structmxlMutableWrappedMultiBufferSlice__t.html#af3be6f0132e22477c7a3fcdec729a4bd">stride</a> * chan);</div>
-<div class="line"><span class="lineno">  117</span>                    std::memcpy(dstAddr, srcAddr, fragment.size);</div>
-<div class="line"><span class="lineno">  118</span>                    srcAddr += fragment.size;</div>
-<div class="line"><span class="lineno">  119</span>                }</div>
-<div class="line"><span class="lineno">  120</span>            }</div>
-<div class="line"><span class="lineno">  121</span>        }</div>
-<div class="line"><span class="lineno">  122</span> </div>
-<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">return</span> *header;</div>
-<div class="line"><span class="lineno">  124</span>    }</div>
+<div class="line"><span class="lineno">  109</span>        <span class="comment">// The egress side writes the payload in channel-major order: all fragments for one channel are contiguous before the next channel.</span></div>
+<div class="line"><span class="lineno">  110</span>        <span class="comment">// Consume fragments in that same order so wrapped slices do not interleave channel data.</span></div>
+<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> chan = std::size_t{0}; chan &lt; slices.<a class="code hl_variable" href="structmxlMutableWrappedMultiBufferSlice__t.html#a1c6b83fc652f5c04b8d0b7fe6b5232d2">count</a>; chan++)</div>
+<div class="line"><span class="lineno">  112</span>        {</div>
+<div class="line"><span class="lineno">  113</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> <span class="keyword">const</span>&amp; fragment : slices.base.fragments)</div>
+<div class="line"><span class="lineno">  114</span>            {</div>
+<div class="line"><span class="lineno">  115</span>                <span class="comment">// check if the fragment present</span></div>
+<div class="line"><span class="lineno">  116</span>                <span class="keywordflow">if</span> (fragment.size &gt; 0)</div>
+<div class="line"><span class="lineno">  117</span>                {</div>
+<div class="line"><span class="lineno">  118</span>                    <span class="keyword">auto</span> <span class="keyword">const</span> dstAddr = <span class="keyword">reinterpret_cast&lt;</span>std::uint8_t*<span class="keyword">&gt;</span>(fragment.pointer) + (slices.<a class="code hl_variable" href="structmxlMutableWrappedMultiBufferSlice__t.html#af3be6f0132e22477c7a3fcdec729a4bd">stride</a> * chan);</div>
+<div class="line"><span class="lineno">  119</span>                    std::memcpy(dstAddr, srcAddr, fragment.size);</div>
+<div class="line"><span class="lineno">  120</span>                    srcAddr += fragment.size;</div>
+<div class="line"><span class="lineno">  121</span>                }</div>
+<div class="line"><span class="lineno">  122</span>            }</div>
+<div class="line"><span class="lineno">  123</span>        }</div>
+<div class="line"><span class="lineno">  124</span> </div>
+<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">return</span> *header;</div>
+<div class="line"><span class="lineno">  126</span>    }</div>
 <div class="ttc" id="aclassmxl_1_1lib_1_1fabrics_1_1ofi_1_1AudioBounceBuffer_html_a632fe777f8ce6096af85399b4a161de9"><div class="ttname"><a href="classmxl_1_1lib_1_1fabrics_1_1ofi_1_1AudioBounceBuffer.html#a632fe777f8ce6096af85399b4a161de9">mxl::lib::fabrics::ofi::AudioBounceBuffer::getMutableMultiBufferSlices</a></div><div class="ttdeci">static void getMutableMultiBufferSlices(std::uint64_t index, std::size_t count, std::size_t bufferLength, std::size_t sampleWordSize, std::size_t channelCount, std::uint8_t *baseBufferPtr, mxlMutableWrappedMultiBufferSlice &amp;slice) noexcept</div><div class="ttdef"><b>Definition</b> <a href="AudioBounceBuffer_8cpp_source.html#l00015">AudioBounceBuffer.cpp:15</a></div></div>
 <div class="ttc" id="aclassmxl_1_1lib_1_1fabrics_1_1ofi_1_1Exception_html_a0302e7afea5ec6982664237acc8559f4"><div class="ttname"><a href="classmxl_1_1lib_1_1fabrics_1_1ofi_1_1Exception.html#a0302e7afea5ec6982664237acc8559f4">mxl::lib::fabrics::ofi::Exception::invalidArgument</a></div><div class="ttdeci">static Exception invalidArgument(fmt::format_string&lt; T... &gt; fmt, T &amp;&amp;... args)</div><div class="ttdoc">Make an MXL_ERR_INVALID_ARG exception.</div><div class="ttdef"><b>Definition</b> <a href="Exception_8hpp_source.html#l00043">Exception.hpp:43</a></div></div>
 <div class="ttc" id="astructmxlMutableWrappedMultiBufferSlice__t_html"><div class="ttname"><a href="structmxlMutableWrappedMultiBufferSlice__t.html">mxlMutableWrappedMultiBufferSlice_t</a></div><div class="ttdef"><b>Definition</b> <a href="flow_8h_source.html#l00111">flow.h:112</a></div></div>
